@@ -49,8 +49,8 @@ class XParent extends LitElement {
     `
   ];
   private _routes = new Routes(this, [
-    {pattern: new URLPattern({ pathname: 'some-path/*?' }), render: () => html`<x-child></x-child>`},
-    {pattern: new URLPattern({ pathname: '' }), render: () => html`X-Parent Blank Match`},
+    { path: 'some-path/*?', render: () => html`<x-child></x-child>`},
+    { path: '', render: () => html`X-Parent Blank Match`},
   ], {
     fallback: {
       render: () => html`X-Parent Fallback Route`,
@@ -82,7 +82,6 @@ class XChild extends LitElement {
   ];
   private _routes = new Routes(this, [
     {path: 'child/foo', render: () => html`X-Child foo`},
-    {path: 'child/bar', render: () => html`X-Child bar`},
     {path: '', render: () => html`X-Child Blank Match`},
   ], {
     fallback: {
