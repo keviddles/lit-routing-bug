@@ -39,7 +39,7 @@ There are three components:
 
 ## /some-path/ (with ending slash)
 
-<img src="./screenshots/:some-path.png">
+<img src="./screenshots/:some-path:.png">
 
 - In `x-parent`, this matches the `path: 'some-path/*?'` route and renders an `x-child`.
 - In `x-child`, this matches the `path: ''` route and renders `X-Child Blank Match`. This seems correct.
