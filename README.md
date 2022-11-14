@@ -1,5 +1,21 @@
 This is a repo demonstrating a (potential) bug with Lit router.
 
+[Discord Context](https://discord.com/channels/1012791295170859069/1040018320797208577/1040406145577267251).
+
+# Overview
+
+There are three components:
+
+- `x-app`
+- `x-parent`
+- `x-child`
+
+`x-app` defines a `Router` and a match-all route (`'/*'`).
+
+`x-parent` defines `Routes` and defines a base `''` route, specific path route (`'some-path/*?'`), and a fallback route. All routes appear to match correctly.
+
+`x-child` defines `Routes` and defines a base `''` route, specific path route (`'child/foo'`), and a fallback route. [The base route **does not seem** to match; this may be a bug](#some-path-without-ending-slash).
+
 # Routes
 
 ## /
