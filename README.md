@@ -2,6 +2,18 @@ This is a repo demonstrating a (potential) bug with Lit router.
 
 [Discord Context](https://discord.com/channels/1012791295170859069/1040018320797208577/1040406145577267251).
 
+[Github Issue](https://github.com/lit/lit/issues/3453)
+
+# Reproduction
+
+1. git clone https://github.com/keviddles/lit-routing-bug
+2. cd lit-routing-bug
+3. pnpm install
+4. pnpm start
+5. Navigate to localhost:5173
+6. Click on the link /some-path. Observe no text matching X-Child Blank Match. (It should appear).
+7. Click on the link /some-path/. Observe text matching X-Child Blank Match.
+
 # Overview
 
 There are three components:
